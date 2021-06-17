@@ -1,7 +1,8 @@
-mod snake;
+#[path = "tetris/tetris.rs"]
+mod tetris;
 
 use bevy::prelude::*;
-use snake::SnakePlugin;
+use tetris::*;
 
 fn main() {
     App::build()
@@ -12,6 +13,6 @@ fn main() {
             ..Default::default()
         })
         .add_plugins(DefaultPlugins)
-        .add_plugin(SnakePlugin)
+        .add_plugin(TetrisPlugin)
         .run();
 }
